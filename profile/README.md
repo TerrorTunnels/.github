@@ -71,21 +71,21 @@ graph TB
 
 This project consists of three main components, each in its own repository:
 
-### 1. [vpn-infra-tf](link-to-terraform-repo)
+### 1. [vpn-infra-tf](https://github.com/TerrorTunnels/vpn-infra-tf)
 Infrastructure as Code for the VPN server:
 - AWS VPC and networking
 - EC2 instance with OpenVPN
 - Security groups and access controls
 - Terraform configuration
 
-### 2. [vpn-control-api](link-to-api-repo)
+### 2. [vpn-control-api](https://github.com/TerrorTunnels/vpn-control-api)
 Serverless control interface:
 - AWS API Gateway
 - Lambda function
 - EC2 instance management
 - Security and monitoring
 
-### 3. [vpncontrol-ios](link-to-ios-repo)
+### 3. [VPNControl-ios](https://github.com/TerrorTunnels/VPNControl-ios)
 iOS mobile application:
 - SwiftUI-based interface
 - Real-time status monitoring
