@@ -96,21 +96,21 @@ iOS mobile application:
 
 1. Deploy Infrastructure:
 ```bash
-git clone [vpn-infra-tf-url]
+git clone git@github.com:TerrorTunnels/vpn-infra-tf.git
 cd vpn-infra-tf
 # Follow README instructions
 ```
 
 2. Set up API:
 ```bash
-git clone [vpn-control-api-url]
+git clone git@github.com:TerrorTunnels/vpn-control-api.git
 cd vpn-control-api
 # Follow README instructions
 ```
 
 3. Configure iOS App:
 ```bash
-git clone [vpncontrol-ios-url]
+git clone git@github.com:TerrorTunnels/VPNControl-ios.git
 cd vpncontrol-ios
 # Follow README instructions
 ```
