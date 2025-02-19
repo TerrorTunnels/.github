@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Styles -->
+  <defs>
+    <style>
+      .aws-box { fill: #FF9900; stroke: #232F3E; }
+      .service-box { fill: #7AA116; stroke: #232F3E; }
+      .network-box { fill: #3F8624; stroke: #232F3E; color: white; }
+      .security-box { fill: #DD344C; stroke: #232F3E; color: white; }
+      .client-box { fill: #3B48CC; stroke: #232F3E; color: white; }
+      .box-label { fill: white; font-family: Arial, sans-serif; font-size: 14px; }
+      .connection { stroke: #666; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .connection-label { fill: #666; font-family: Arial, sans-serif; font-size: 12px; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- iPhone -->
+  <rect x="50" y="50" width="200" height="150" rx="10" class="client-box"/>
+  <text x="150" y="100" text-anchor="middle" class="box-label">VPN Control App</text>
+  <rect x="75" y="120" width="150" height="50" rx="5" class="security-box"/>
+  <text x="150" y="150" text-anchor="middle" class="box-label">Keychain Storage</text>
+
+  <!-- AWS Cloud -->
+  <rect x="300" y="50" width="450" height="450" rx="10" class="aws-box"/>
+  <text x="525" y="80" text-anchor="middle" class="box-label">AWS Cloud</text>
+
+  <!-- API Layer -->
+  <rect x="350" y="100" width="150" height="150" rx="5" class="service-box"/>
+  <text x="425" y="130" text-anchor="middle" class="box-label">API Gateway</text>
+  <rect x="350" y="180" width="150" height="50" rx="5" class="service-box"/>
+  <text x="425" y="210" text-anchor="middle" class="box-label">Lambda Function</text>
+
+  <!-- VPC -->
+  <rect x="550" y="100" width="150" height="350" rx="5" class="network-box"/>
+  <text x="625" y="130" text-anchor="middle" class="box-label">VPC (10.0.0.0/16)</text>
+  <rect x="575" y="150" width="100" height="100" rx="5" class="service-box"/>
+  <text x="625" y="180" text-anchor="middle" class="box-label">EC2 Instance</text>
+  <text x="625" y="200" text-anchor="middle" class="box-label">(OpenVPN)</text>
+  <rect x="575" y="270" width="100" height="50" rx="5" class="security-box"/>
+  <text x="625" y="300" text-anchor="middle" class="box-label">Security Group</text>
+
+  <!-- VPN Client -->
+  <rect x="50" y="350" width="200" height="100" rx="10" class="client-box"/>
+  <text x="150" y="400" text-anchor="middle" class="box-label">VPN Client</text>
+
+  <!-- Connections -->
+  <path d="M250 125 L350 125" class="connection"/>
+  <text x="300" y="115" text-anchor="middle" class="connection-label">HTTPS</text>
+  
+  <path d="M500 200 L575 200" class="connection"/>
+  <text x="537" y="190" text-anchor="middle" class="connection-label">Control</text>
+  
+  <path d="M250 400 L575 200" class="connection"/>
+  <text x="400" y="350" text-anchor="middle" class="connection-label">VPN Traffic</text>
+</svg>
