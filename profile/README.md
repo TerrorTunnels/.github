@@ -8,27 +8,33 @@ A complete solution for deploying and managing a personal VPN service using AWS,
 graph TB
     subgraph iPhone["iPhone"]
         App["VPN Control App"]
-        Keychain["Keychain\n(API Key Storage)"]
+        Keychain["`Keychain
+        (API Key Storage)`"]
     end
 
     subgraph AWS["AWS Cloud"]
         subgraph API["API Layer"]
             APIG["API Gateway"]
+                subgraph APIK["Authorization"]
+                    APIKey["API Key"]
+                end
             Lambda["Lambda Function"]
         end
         
         subgraph VPC["VPC (10.0.0.0/16)"]
             subgraph PublicSubnet["Public Subnet (10.0.1.0/24)"]
-                EC2["EC2 Instance\n(OpenVPN Server)"]
+                EC2["`EC2 Instance 
+                (OpenVPN Server)`"]
                 EIP["Elastic IP"]
             end
             IGW["Internet Gateway"]
-            SG["Security Group\n- UDP 1194 (VPN)\n- TCP 22 (SSH)"]
+            SG["`Security Group 
+            - UDP 1194 (VPN) 
+            - TCP 22 (SSH)`"]
         end
         
         subgraph IAM["IAM"]
             Role["Lambda IAM Role"]
-            APIKey["API Key"]
         end
     end
 
@@ -37,10 +43,11 @@ graph TB
     end
 
     %% App connections
-    App -->|"HTTPS\nAPI Requests"| APIG
+    App -->|"HTTPS API Requests"| APIG
     App <-->|"Store/Retrieve"| Keychain
 
     %% API Layer connections
+    APIG -->|"Validate"| APIK
     APIG -->|"Invoke"| Lambda
     Lambda -->|"Start/Stop/Status"| EC2
     Lambda <-->|"Assume"| Role
@@ -52,7 +59,7 @@ graph TB
     IGW -->|"Internet Access"| Internet
 
     %% Client connections
-    Client <-->|"VPN Traffic\nUDP 1194"| EIP
+    Client <-->|"VPN Traffic UDP 1194"| EIP
 
     %% Styles
     classDef aws fill:#FF9900,stroke:#232F3E,color:black;
@@ -143,6 +150,10 @@ All repositories are licensed under the MIT License.
 - AWS for the cloud infrastructure
 - OpenVPN for the VPN software
 - ChatGPT and Claude for code generation
+	- Full chats transcripts 
+		- VPN infra [GenAI_chats/vpn-infra](../GenAI_chats/vpn-infra/AWS_VPN_ChatGPT.md)
+		- REST API [GenAI_chats/api-setup](../GenAI_chats/api-setup/Serverless_API.md)
+		- iOS app [GenAI_chats/ios-app](../GenAI_chats/ios-app/iOS_app.md)
 - The Swift and iOS developer community
 
 ## Contact
