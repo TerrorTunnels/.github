@@ -1,4 +1,4 @@
-#GenAI Chat Transcripts
+# GenAI Chat Transcripts
 
 Seemed appropriate to include the prompts and chats with ChatGPT and Claude that resulted in this project, and so I did just that. 
 
