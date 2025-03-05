@@ -14,8 +14,8 @@ GenAI_chats/
    | - README.md
 ```
 
-[AWS_VPN_ChatGPT.md](GenAI_chats/vpn-infraAWS_VPN_ChatGPT.md) - This is the initiation of the project and contains the EC2 infrastructure for the VPN service itself | ChatGPT 4o
+[AWS_VPN_ChatGPT.md](vpn-infra/AWS_VPN_ChatGPT.md) - This is the initiation of the project and contains the EC2 infrastructure for the VPN service itself | ChatGPT 4o
 
-[Serverless_API.md](GenAI_chats/api-setup/Serverless_API.md) - Next we need to create the serverless REST API service | ChatGPT 4o
+[Serverless_API.md](api-setup/Serverless_API.md) - Next we need to create the serverless REST API service | ChatGPT 4o
 
-[ios-app/iOS_app.md](GenAI_chats/ios-app/iOS_app.md) - Finally, we come to the iOS app to use the REST API to control the state of the VPN | Claude 3.7 Sonnet & ChatGPT 4o
+[ios-app/iOS_app.md](ios-app/iOS_app.md) - Finally, we come to the iOS app to use the REST API to control the state of the VPN | Claude 3.7 Sonnet & ChatGPT 4o
