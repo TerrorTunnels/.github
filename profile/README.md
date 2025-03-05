@@ -1,6 +1,8 @@
 # Personal VPN Control System
 
-A complete solution for deploying and managing a personal VPN service using AWS, created during a sabbatical in Taipei. The project demonstrates the potential of AI-assisted development, with nearly all code generated using ChatGPT and Claude.
+A complete solution for deploying and managing a personal VPN service using AWS, created during a sabbatical in Taipei. The project demonstrates the potential of AI-assisted development, with nearly all code generated using ChatGPT and Claude. 
+
+*Note: [Complete chat transcripts creating this project are included](GenAI_chats/README.md)*
 
 ## System Architecture
 
