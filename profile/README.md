@@ -153,9 +153,9 @@ All repositories are licensed under the MIT License.
 - OpenVPN for the VPN software
 - ChatGPT and Claude for code generation
 	- Full chats transcripts 
-		- VPN infra [GenAI_chats/vpn-infra](../GenAI_chats/vpn-infra/AWS_VPN_ChatGPT.md)
-		- REST API [GenAI_chats/api-setup](../GenAI_chats/api-setup/Serverless_API.md)
-		- iOS app [GenAI_chats/ios-app](../GenAI_chats/ios-app/iOS_app.md)
+		- VPN infra [GenAI_chats/vpn-infra](https://github.com/TerrorTunnels/.github/blob/main/GenAI_chats/vpn-infra/AWS_VPN_ChatGPT.md)
+		- REST API [GenAI_chats/api-setup](https://github.com/TerrorTunnels/.github/blob/main/GenAI_chats/api-setup/Serverless_API.md)
+		- iOS app [GenAI_chats/ios-app](https://github.com/TerrorTunnels/.github/blob/main/GenAI_chats/ios-app/iOS_app.md)
 - The Swift and iOS developer community
 
 ## Contact
